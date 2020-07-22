@@ -1,14 +1,10 @@
+#adam is the beginning for man. So too will he be the beginning of this program.
+
+#This is pentacore version 0.03
+#0.03 changelog: Reworked the entire game into an OOP fashion using Micheal Zalla's "A Marginally Eventful Friday Night" as an example. (Thanks again, Mike!)
+#also, this is written in python 3.5
 import pentmas
-import modules
-import ac1
 
-version = "0.02"
+#creates the first instance of the game
 
-def start():
-    pentmas.slow_txt("Welcome to Pentacore, ver.%s! The premier text-adventure game since 2020." % version)
-    pentmas.slow_txt("Developed by Pontius Varo. ©Eltersoft. All rights reserved. ")
-    pentmas.slow_txt("Loading.......")
-    pentmas.slow_txt("[-----------------------------------------]")
-    ac1.room1()
-
-start()
+adam = pentmas.Pentacore()
