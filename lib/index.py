@@ -1,6 +1,5 @@
 #this is the index of text. All text is fetched from here
-
-rm = {"ROOM1":{ "UNVISTED_TEXT" : "From the abyss of sleep does your consciousness emerge. Your vision is blury and your mouth is dry."
+rms = {"ROOM1":{ "UNVISTED_TEXT" : "From the abyss of sleep does your consciousness emerge. Your vision is blury and your mouth is dry."
                                     "You have no recollection of where you are, and find yourself very much confused."
                                     "After a few seconds your vision clears and you are finally able to observe your surroundings........"
                                     "You find yourself in what seems to be a log cabin. The walls are made of what looks to be fine oak logs."
@@ -22,18 +21,17 @@ rm = {"ROOM1":{ "UNVISTED_TEXT" : "From the abyss of sleep does your consciousne
 
                   "ROUTES": ["WEST", "EAST", "SOUTH"],
                 }
-
-
-
-
-
-
-
-
-
-
-
         }
+#==========#
+items = { "SWORD":              {"DESC": "A fine silver sword decorated with a plethora of jewels. It seems to glow whenever enemies are nearby, which reminds you"
+                                        "of a certain story concerning hobbits.",
+                                        "USE": None },
+
+           "RING":              {"DESC": "A small golden ring that is very plain looking. However, you can't help but feel as if an odd, maybe even evil, power is radiating"
+                                        "from it.",
+                                        "USE": None },
+        }
+
 
 
 

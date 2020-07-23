@@ -1,3 +1,6 @@
+import textwrap
+from sys import exit
+from time import sleep
 
 class Printer():
 
@@ -5,15 +8,20 @@ class Printer():
         pass
 
     @staticmethod #I forget, what is the purpose of a static method?
-    def output(string):
-        #lines = []
-        for x in string:
-            print(x, end='', flush=True)
-        sleep (0.1) # switch to one after debugging.
-    print()
+    def output(string, width=80):
+        lines = []
+        splitStr = string.splitlines()
+        for line in splitStr:
+            for l in textwrap.wrap(line,width):
+                lines.append(l)
+            lines.append("")
 
-    #def output_fast(string):
-        #for x in string:
-            #print (x, end='', flush=True)
-        #sleep(0.1)
-    #print()
+        for line in lines:
+            Printer.miniprint(line)
+
+
+    def miniprint(txt):
+        for x in txt:   #cycle through the text one character at a time
+            print(x, end='', flush=True)
+            sleep (0.1) # switch to one after debugging.
+        print()
