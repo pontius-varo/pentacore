@@ -1,6 +1,6 @@
 #In this file, rooms will all be defined by the same class.
 #collect room data (concept taken from Micheal Zalla's 'Room.py')
-from . import index
+from . import Index
 
 class Room(object):
 

@@ -12,7 +12,7 @@ In addition, most of the underlying framework is inspired by another project mad
 
 +==========+
 
-To begin the program, use the terminal to arrive at the main directory. Then, use Adam.py to begin the program (ex. "user@desktop:~/pentacore/$ python3 adam.py").
+To begin the program, use the terminal to arrive at the main directory. Then, use 'adam.py' to begin the program (ex. "user@desktop:~/pentacore/$ python3 adam.py").
 
 Be sure to use Python 3.5+, as older versions of Python are not compatible with this program.
 

@@ -1,7 +1,7 @@
 import sys
 
-from libtes import core1, index, inv #replace 'libtes' to 'lib'
-from libtes import nav, tools
+from lib import Abraham, Index, Inv
+from lib import Tools
 
 class Pentacore(object):
 
