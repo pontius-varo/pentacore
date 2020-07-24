@@ -28,10 +28,8 @@ class Pentacore(object):
     #rms["ROOM3"].addItems([Item.Item("SWORD")])
 
     def __init__(self):
-
-    #Maybe attach a function to an item in order to forfill quest?
-
-        #index.items["RING", "SWORD"]["PRESENT"] = self.presentItem
+        Index.items["SWORD"]["PRESENT"] = self.presentItem1
+        Index.items["RING"]["PRESENT"] = self.presentItem2
 
         self.inv = Inv.PlayerInventory([])
 
@@ -158,8 +156,8 @@ class Pentacore(object):
         Tools.Printer.output("Until next time.")
         sys.exit()
 
-    def showInv():
-        self.Inv.display()
+    def showInv(self):
+        self.inv.display()
 
     def death_via_grue(self):
         #add more rooms. btw I don't think this is working properly.
@@ -173,3 +171,27 @@ class Pentacore(object):
         Tools.Printer.output("Thus, you pull out an knife and carve a Sudoku puzzle unto your torso.")
         Tools.Printer.output("Within minutes you bleed to death. Good job!")
         self.quit()
+
+    def ending(self):
+        pass
+#=======================================#
+
+    def presentItem1(self):
+        if self.currentRm == "CASTLE":
+            if self.inventory.hasItem("SWORD"):
+                Tools.Printer.output("You present the sword to the Duke. He is very pleased and gives you a large sum of gold.")
+                Inv.Inventory.removeItems("SWORD")
+                Inv.Inventory.addItems("SACKOFGOLD")
+            else:
+                Tools.Printer.output("You don't have this item on you! How could you present it to the duke?")
+                return
+
+    def presentItem2(self):
+        if self.currentRm == "TAVERN2":
+            if self.inventory.hasItem("RING"):
+                Tools.Printer.output("You present the ring to the pretty barmaid. She is estatic and accepts your proposal.")
+                Tools.Printer.output("She then leads you to a secluded room to 'cement' the new relationship.")
+                self.ending()
+            else:
+                Tools.Printer.output("You are still empty handed! What are you doing?")
+                return
