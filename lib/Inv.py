@@ -38,7 +38,7 @@ class Inventory():
     def hasItem(self, itemName):
         name = itemName.upper()
         for item in self:
-            if item.name = name:
+            if item.name == name:
                 return True
             #else?
             return False
@@ -82,7 +82,7 @@ class PlayerInventory(Inventory):
                 i = self.inventory.index(itemA)
                 query.remove(itemA.name)
                 for itemB in self:
-                    if self.inventory.indx(itemB) == i"
+                    if self.inventory.indx(itemB) == i:
                         continue
                     if itemB.name in query:
                         hasItemB = True

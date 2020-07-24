@@ -25,8 +25,8 @@ class Printer():
         for x in txt:
             #cycle through the text one character at a time
             print(x, end='', flush=True)
-             # switch to one after debugging.
-            sleep (0.1)
+             # switch to .1 after debugging.
+            sleep (0.0)
         print()
 
 #=====Item======#

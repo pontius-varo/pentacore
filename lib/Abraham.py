@@ -15,9 +15,9 @@ class Room(object):
     def __init__(self, name, locked=False): #for now, use Mike's skeletion until I understand it further
     #check for a valid room
         validRm = False
-        for key in index.rms:
+        for key in Index.rms:
             if key == name.upper():
-                self.dataH = index.rms[key]
+                self.dataH = Index.rms[key]
                 validRm = True
         #valid room, collect room data
                 self.name = name.upper()
